@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0b0c0f;
+  --color-foreground: #e0e2e8;
+  --color-muted: #9ca3af;
+  --color-accent: #5b8fb9;
+  --color-accent-bright: #7ab3d4;
+  --color-surface: #14161b;
+  --color-surface-light: #1c1f26;
+  --color-border: #2a2d35;
+  --color-border-light: #3a3d45;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Subtle grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(42, 45, 53, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 45, 53, 0.3) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Section divider line */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-border-light),
+    transparent
+  );
+}

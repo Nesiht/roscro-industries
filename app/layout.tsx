@@ -13,9 +13,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RosCro Industries — EVE Online Corporation",
+  metadataBase: new URL("https://roscro.eu"),
+  title: {
+    default: "RosCro Industries",
+    template: "%s | RosCro Industries",
+  },
   description:
-    "A project-driven EVE Online corporation for builders, industrialists and long-term players. Highsec industrial foundation. Nullsec trajectory.",
+    "Join RosCro Industries – a highsec-focused EVE Online corporation specializing in industry, mining, and long-term nullsec expansion.",
+  keywords: [
+    "EVE Online corp",
+    "EVE Online industry",
+    "EVE Online highsec corporation",
+    "EVE Online mining corp",
+  ],
+  openGraph: {
+    title: "RosCro Industries",
+    description:
+      "Highsec industry corporation in EVE Online focused on long-term growth.",
+    url: "https://roscro.eu",
+    siteName: "RosCro Industries",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

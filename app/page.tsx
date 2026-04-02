@@ -12,6 +12,17 @@ import { FutureReportsSection } from "@/components/sections/future-reports-secti
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "RosCro Industries",
+            url: "https://roscro.eu",
+          }),
+        }}
+      />
       <SiteHeader />
       <main>
         <HeroSection />

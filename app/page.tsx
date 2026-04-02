@@ -1,5 +1,3 @@
-import { SiteHeader } from "@/components/layout/site-header";
-import { SiteFooter } from "@/components/layout/site-footer";
 import { HeroSection } from "@/components/sections/hero-section";
 import { WhoWeAreSection } from "@/components/sections/who-we-are-section";
 import { CurrentOperationsSection } from "@/components/sections/current-operations-section";
@@ -23,7 +21,6 @@ export default function Home() {
           }),
         }}
       />
-      <SiteHeader />
       <main>
         <HeroSection />
         <div className="section-divider" />
@@ -41,7 +38,6 @@ export default function Home() {
         <div className="section-divider" />
         <FutureReportsSection />
       </main>
-      <SiteFooter />
     </>
   );
 }

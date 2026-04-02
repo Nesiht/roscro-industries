@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export function SiteFooter() {
@@ -43,20 +44,46 @@ export function SiteFooter() {
                   {SITE_CONFIG.publicChannel}
                 </span>
               </li>
+              <li>
+                Recruitment:{" "}
+                <span className="text-green-400 font-semibold">
+                  {SITE_CONFIG.recruitmentStatus}
+                </span>
+              </li>
             </ul>
           </div>
 
-          {/* Recruitment */}
+          {/* Pages */}
           <div>
             <h4 className="text-foreground text-sm font-semibold uppercase tracking-wider mb-3">
-              Recruitment
+              Pages
             </h4>
-            <p className="text-sm text-muted">
-              Status:{" "}
-              <span className="text-green-400 font-semibold">
-                {SITE_CONFIG.recruitmentStatus}
-              </span>
-            </p>
+            <ul className="space-y-2 text-sm text-muted">
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-accent-bright transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/join"
+                  className="hover:text-accent-bright transition-colors"
+                >
+                  Join
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="hover:text-accent-bright transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Future */}

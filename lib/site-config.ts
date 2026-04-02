@@ -21,10 +21,8 @@ export const REPORTS = [
 ] as const;
 
 export const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "Who We Are", href: "#who-we-are" },
-  { label: "Operations", href: "#operations" },
-  { label: "Vision", href: "#vision" },
-  { label: "Contribute", href: "#contribute" },
-  { label: "Join", href: "#join" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Join", href: "/join" },
+  { label: "Blog", href: "/blog" },
 ] as const;

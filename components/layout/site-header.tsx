@@ -1,11 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SITE_CONFIG, NAV_LINKS } from "@/lib/site-config";
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -24,7 +27,7 @@ export function SiteHeader() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between">
           {/* Logo / Corp name */}
-          <a href="#home" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group">
             {/* Logo placeholder — replace src when asset is available */}
             <div className="h-8 w-8 rounded border border-border-light bg-surface flex items-center justify-center text-accent font-mono text-xs font-bold">
               RI
@@ -32,18 +35,22 @@ export function SiteHeader() {
             <span className="text-foreground font-semibold tracking-wide text-sm uppercase">
               {SITE_CONFIG.corpName}
             </span>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                className="text-muted hover:text-foreground text-sm transition-colors duration-200"
+                className={`text-sm transition-colors duration-200 ${
+                  pathname === link.href
+                    ? "text-accent-bright"
+                    : "text-muted hover:text-foreground"
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a
               href={SITE_CONFIG.discordUrl}
@@ -90,14 +97,18 @@ export function SiteHeader() {
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
           <nav className="mx-auto max-w-6xl px-4 py-4 flex flex-col gap-3">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-muted hover:text-foreground text-sm py-1 transition-colors"
+                className={`text-sm py-1 transition-colors ${
+                  pathname === link.href
+                    ? "text-accent-bright"
+                    : "text-muted hover:text-foreground"
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a
               href={SITE_CONFIG.discordUrl}

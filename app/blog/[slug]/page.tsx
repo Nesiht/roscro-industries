@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
@@ -65,6 +66,26 @@ function renderBlock(block: ContentBlock, index: number) {
             </li>
           ))}
         </ul>
+      );
+    case "image":
+      return (
+        <figure key={index} className="my-8">
+          <div className="relative w-full overflow-hidden rounded border border-border">
+            <Image
+              src={block.src}
+              alt={block.alt}
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </div>
+          {block.caption && (
+            <figcaption className="mt-2 text-center text-xs text-muted/70 font-mono">
+              {block.caption}
+            </figcaption>
+          )}
+        </figure>
       );
   }
 }

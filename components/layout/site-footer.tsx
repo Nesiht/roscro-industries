@@ -30,6 +30,16 @@ export function SiteFooter() {
             <ul className="space-y-2 text-sm text-muted">
               <li>
                 <a
+                  href={SITE_CONFIG.necmUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent-bright transition-colors"
+                >
+                  NECM Portal
+                </a>
+              </li>
+              <li>
+                <a
                   href={SITE_CONFIG.discordUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -86,14 +96,20 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Future */}
+          {/* Reports */}
           <div>
             <h4 className="text-foreground text-sm font-semibold uppercase tracking-wider mb-3">
               Reports
             </h4>
-            <p className="text-sm text-muted">
-              Quarterly and NAV reports are planned for a future update.
+            <p className="text-sm text-muted mb-2">
+              Industry and NAV reports are published regularly.
             </p>
+            <Link
+              href="/#reports"
+              className="text-sm text-accent hover:text-accent-bright transition-colors"
+            >
+              View latest report &rarr;
+            </Link>
           </div>
         </div>
 

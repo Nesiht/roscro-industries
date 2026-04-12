@@ -1,5 +1,6 @@
 export const SITE_CONFIG = {
   corpName: "RosCro Industries",
+  necmUrl: "https://necm.roscro.eu",
   discordUrl: "https://discord.gg/TXtvpa49",
   publicChannel: "roscro-pub",
   recruitmentStatus: "OPEN" as const,

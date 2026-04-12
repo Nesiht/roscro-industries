@@ -1,7 +1,8 @@
 export type ContentBlock =
   | { type: "paragraph"; text: string }
   | { type: "heading"; text: string }
-  | { type: "list"; items: string[] };
+  | { type: "list"; items: string[] }
+  | { type: "image"; src: string; alt: string; caption?: string };
 
 export type BlogPost = {
   slug: string;
@@ -17,6 +18,185 @@ export type BlogPost = {
 };
 
 const posts: BlogPost[] = [
+  {
+    slug: "introducing-necm-eve-online-corporation-management",
+    title:
+      "Introducing NECM — Why Managing an EVE Online Corporation Shouldn\u2019t Feel Like a Second Job",
+    excerpt:
+      "Between processing applications, tracking fleet participation and managing marketplace logistics, the admin overhead can eclipse the actual gameplay. That\u2019s why we built New Eden Community Manager.",
+    description:
+      "Introducing New Eden Community Manager (NECM) \u2014 an open-source, self-hosted web application for EVE Online corporation and alliance management. Recruitment, fleet tracking, leaderboards, marketplace, doctrines and Discord integration.",
+    publishedAt: "2026-04-12",
+    author: "RosCro Industries",
+    tags: ["NECM", "Corp Management", "Open Source", "Tools"],
+    seoKeywords: [
+      "EVE Online corporation management",
+      "EVE Online corp tool",
+      "NECM EVE Online",
+      "New Eden Community Manager",
+      "EVE Online fleet tracking",
+      "EVE Online recruitment tool",
+      "open source EVE tools",
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "If you\u2019ve ever run a corporation in EVE Online, you know the feeling. Between processing applications, tracking fleet participation, managing marketplace logistics, and keeping your Discord server in sync \u2014 the administrative overhead can eclipse the actual gameplay. That\u2019s why I built New Eden Community Manager (NECM), an open-source web application designed to give EVE corporation and alliance leaders the tools they need without the headache.",
+      },
+      {
+        type: "heading",
+        text: "What is NECM?",
+      },
+      {
+        type: "paragraph",
+        text: "New Eden Community Manager is a self-hosted web application built on modern technologies \u2014 Next.js, TypeScript, PostgreSQL, and Prisma \u2014 that serves as a centralized hub for EVE Online corporation management. It authenticates pilots through EVE Online\u2019s SSO, so there are no extra accounts to create. Log in with your EVE character, and the system knows who you are, what corporation you belong to, and what roles you should have.",
+      },
+      {
+        type: "paragraph",
+        text: "At its core, NECM replaces the patchwork of spreadsheets, Google Forms, Discord bots, and manual bookkeeping that most corporations rely on. It brings everything under one roof with a proper role-based access control system, audit logging, and a clean interface that works for both leadership and line members.",
+      },
+      {
+        type: "image",
+        src: "/blog/necm-dashboard.png",
+        alt: "NECM dashboard showing pilot profile, corporation bulletins and quick action tiles",
+        caption:
+          "The NECM dashboard \u2014 corporation bulletins, pilot profile and quick actions at a glance.",
+      },
+      {
+        type: "heading",
+        text: "Recruitment That Actually Works",
+      },
+      {
+        type: "paragraph",
+        text: "One of the biggest time sinks for any CEO is recruitment. NECM provides a full application pipeline with customizable questions per corporation, multi-character support, and a status workflow that tracks applicants from submission through review, interview, acceptance, or rejection. Recruiters can manage their queue without needing full admin access, and every status change is logged and \u2014 optionally \u2014 announced in Discord.",
+      },
+      {
+        type: "heading",
+        text: "Fleet Participation Tracking",
+      },
+      {
+        type: "paragraph",
+        text: "Running fleets is the lifeblood of any active corporation, but tracking who showed up and rewarding consistent participation has always been painful. NECM includes a fleet management system with PAP (Participation Award Points) tracking, ESI verification against CCP\u2019s fleet API, and configurable PAP multipliers. Fleet commanders can register fleets, and the system automatically verifies participation through the EVE API. No more manually checking who was actually in fleet.",
+      },
+      {
+        type: "image",
+        src: "/blog/necm-members.png",
+        alt: "NECM member roster showing PAPs, badges, doctrine readiness, last login and status per pilot",
+        caption:
+          "The member roster \u2014 PAPs, badges, doctrine compliance and activity status in one view.",
+      },
+      {
+        type: "heading",
+        text: "Leaderboards and Badges",
+      },
+      {
+        type: "paragraph",
+        text: "Gamification works. NECM includes a flexible leaderboard engine that can rank pilots across multiple metrics \u2014 fleet participation, PvP kills (via zKillboard integration), marketplace activity, and wormhole signature scanning. Leaderboards support configurable time periods, automatic recalculation, and even prize definitions for competitive seasons. Pair this with a badge system for recognizing achievements, and you have a genuine incentive structure that keeps members engaged.",
+      },
+      {
+        type: "image",
+        src: "/blog/necm-leaderboard.png",
+        alt: "NECM leaderboard creation form with scope, metric and period configuration",
+        caption:
+          "Creating a leaderboard \u2014 scoped by corporation or alliance with flexible metrics and time periods.",
+      },
+      {
+        type: "heading",
+        text: "Marketplace",
+      },
+      {
+        type: "paragraph",
+        text: "The in-game market in EVE is powerful, but coordinating internal corp logistics \u2014 doctrine ship sales, transport contracts, buyback programs \u2014 is a different beast. NECM\u2019s marketplace module supports sell orders, buy requests, and transport listings with claim workflows, ISK pricing, and location data pulled from EVE\u2019s static data. It even calculates route distances between systems using jump data.",
+      },
+      {
+        type: "image",
+        src: "/blog/necm-marketplace.png",
+        alt: "NECM marketplace showing transport contracts, buy orders and sell orders with ISK pricing",
+        caption:
+          "The marketplace \u2014 transport contracts, buy orders and sell listings with route calculations.",
+      },
+      {
+        type: "heading",
+        text: "Doctrines and Skill Tracking",
+      },
+      {
+        type: "paragraph",
+        text: "Every serious corporation maintains fleet doctrines, and making sure members can actually fly them is an eternal challenge. NECM lets leadership define doctrines with full fitting details and required skills, then checks members\u2019 actual skill levels through authenticated ESI endpoints. Pilots can see at a glance which doctrines they\u2019re ready for and what they still need to train.",
+      },
+      {
+        type: "heading",
+        text: "Surveys and Bulletins",
+      },
+      {
+        type: "paragraph",
+        text: "Need member feedback on a proposed policy change? Want to announce a deployment? NECM includes surveys with audience targeting (by role, corporation, or alliance) and a bulletin board system with pinning, publishing controls, and scope management. It\u2019s the internal communications platform that EVE never gave us.",
+      },
+      {
+        type: "heading",
+        text: "Discord Integration",
+      },
+      {
+        type: "paragraph",
+        text: "Let\u2019s be honest \u2014 Discord is where EVE communities actually live. NECM doesn\u2019t try to replace Discord; it enhances it. The application sends rich, color-coded webhook notifications for key events: new applications, status changes, survey publications, and marketplace claims. Each notification type goes to a configurable channel via separate webhook URLs, so your recruitment channel stays focused on recruitment and your logistics channel stays focused on logistics.",
+      },
+      {
+        type: "paragraph",
+        text: "Beyond webhooks, NECM supports full Discord OAuth account linking, allowing pilots to connect their Discord identity to their EVE characters. This opens the door for automated role synchronization between NECM\u2019s RBAC system and your Discord server roles \u2014 so when someone is promoted to Fleet Commander in NECM, their Discord roles can reflect that automatically.",
+      },
+      {
+        type: "paragraph",
+        text: "The integration is designed to be resilient. If Discord is down or a webhook URL isn\u2019t configured, the primary operation always succeeds. Notifications are a courtesy, never a blocker.",
+      },
+      {
+        type: "heading",
+        text: "WHMapper Integration",
+      },
+      {
+        type: "paragraph",
+        text: "For wormhole corporations, scanning is life. NECM integrates directly with WHMapper, a popular wormhole mapping tool, through a secure webhook pipeline. When a pilot scans signatures using WHMapper, the system automatically receives the data, identifies the scanning character, deduplicates signatures (so the same wormhole doesn\u2019t get counted twice), and credits the pilot on the appropriate leaderboard.",
+      },
+      {
+        type: "paragraph",
+        text: "The integration uses HMAC-SHA256 signature verification and replay protection, so it\u2019s secure out of the box. Even if a character isn\u2019t yet registered in NECM, the scan data is stored and can be attributed later. For wormhole corps that want to reward their scanners \u2014 and every wormhole corp should \u2014 this turns an invisible, thankless job into a recognized and tracked contribution.",
+      },
+      {
+        type: "heading",
+        text: "Why This Matters for a CEO",
+      },
+      {
+        type: "paragraph",
+        text: "Running an EVE corporation is a volunteer job with real organizational complexity. You\u2019re managing dozens or hundreds of people across time zones, coordinating military operations, handling logistics, and trying to keep morale high \u2014 all while presumably wanting to play the game yourself.",
+      },
+      {
+        type: "paragraph",
+        text: "Without proper tooling, the CEO becomes the bottleneck. \u201CDid anyone process that application?\u201D \u201CWho showed up to the fleet last Thursday?\u201D \u201CAre our new members actually trained for the doctrine?\u201D These questions shouldn\u2019t require digging through spreadsheets or pinging officers in Discord.",
+      },
+      {
+        type: "paragraph",
+        text: "NECM centralizes these workflows. It enforces permissions so you can safely delegate. It logs every administrative action so you have accountability. It automates the tedious parts \u2014 ESI verification, signature deduplication, leaderboard calculation \u2014 so your leadership team can focus on leading.",
+      },
+      {
+        type: "paragraph",
+        text: "The role-based access control system means you can give your recruiters exactly the access they need and nothing more. Your fleet commanders can manage PAPs without seeing applications. Your survey managers can publish feedback forms without touching marketplace listings. Delegation becomes safe and natural.",
+      },
+      {
+        type: "heading",
+        text: "Built for the Long Game",
+      },
+      {
+        type: "paragraph",
+        text: "NECM is designed with multi-corporation and multi-alliance extensibility in mind. The data model supports approved organizations, corporation-specific configurations, and alliance-level scoping. Whether you\u2019re running a small wormhole corp or a large nullsec alliance, the architecture scales with you.",
+      },
+      {
+        type: "paragraph",
+        text: "It\u2019s open source, self-hosted, and built on a stack that any modern web developer can contribute to. No vendor lock-in, no subscription fees, no data leaving your control.",
+      },
+      {
+        type: "paragraph",
+        text: "EVE Online is a game about building something together. New Eden Community Manager is a tool to help you do that without burning out.",
+      },
+    ],
+  },
   {
     slug: "eve-online-industry-report-march-2026",
     title:

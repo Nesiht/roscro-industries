@@ -251,11 +251,11 @@ export default function AboutPage() {
               and newer players can learn without feeling lost.
             </p>
             <p>
-              We run a Discord-first communication model. All planning,
-              coordination and social interaction happens through our Discord
-              server, which is open to both members and prospective pilots.
-              There is no gatekeeping. If you want to see how we work before
-              committing, you are welcome to join and observe.
+              We use NECM — our community management portal — for recruitment
+              and member management. Day-to-day coordination and social
+              interaction happens through our Discord server, which members gain
+              access to during the onboarding process. If you want to learn more
+              before committing, our in-game public channel is always open.
             </p>
           </div>
         </div>

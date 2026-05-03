@@ -9,6 +9,18 @@ export const SITE_CONFIG = {
 export const REPORTS = [
   {
     title: "Monthly Industry Report",
+    period: "April 2026",
+    fileName: "eve-industry-report-april-2026.pdf",
+    href: "/reports/eve-industry-report-april-2026.pdf",
+    highlights: {
+      adjustedNav: "See PDF",
+      revenue: "See PDF",
+      realizedProfit: "See PDF",
+      itemsSold: "See PDF",
+    },
+  },
+  {
+    title: "Monthly Industry Report",
     period: "March 2026",
     fileName: "eve-industry-report-march-2026.pdf",
     href: "/reports/eve-industry-report-march-2026.pdf",

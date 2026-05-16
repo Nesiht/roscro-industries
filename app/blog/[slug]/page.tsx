@@ -67,6 +67,19 @@ function renderBlock(block: ContentBlock, index: number) {
           ))}
         </ul>
       );
+    case "link":
+      return (
+        <p key={index} className="mb-6">
+          <a
+            href={block.href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center rounded border border-accent/40 px-4 py-2 text-sm font-semibold text-accent hover:border-accent hover:text-accent-bright transition-colors duration-200"
+          >
+            {block.text}
+          </a>
+        </p>
+      );
     case "image":
       return (
         <figure key={index} className="my-8">

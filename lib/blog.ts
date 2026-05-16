@@ -2,6 +2,7 @@ export type ContentBlock =
   | { type: "paragraph"; text: string }
   | { type: "heading"; text: string }
   | { type: "list"; items: string[] }
+  | { type: "link"; text: string; href: string }
   | { type: "image"; src: string; alt: string; caption?: string };
 
 export type BlogPost = {
@@ -18,6 +19,235 @@ export type BlogPost = {
 };
 
 const posts: BlogPost[] = [
+  {
+    slug: "after-exordium-the-first-real-home",
+    title: "After Exordium: Finding Your First Real Home in EVE Online",
+    excerpt:
+      "Exordium is a major onboarding shift for EVE Online, but it is only the beginning. The most important post-tutorial decision is finding the right corporation that provides structure, stability and long-term direction.",
+    description:
+      "After Exordium, the right corporation matters more than ever. RosCro Industries offers a structured, long-term industrial home for new and experienced EVE Online pilots.",
+    publishedAt: "2026-05-16",
+    author: "RosCro Industries",
+    tags: ["Exordium", "Recruitment", "Beginner Guide", "Corporation"],
+    seoKeywords: [
+      "EVE Online Exordium",
+      "first corporation after Exordium",
+      "EVE Online beginner corporation",
+      "what to do after EVE tutorial",
+      "RosCro Industries recruitment",
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "With the launch of the Cradle of War expansion on June 9, CCP Games is introducing one of the biggest changes to EVE Online's new player experience in years: Exordium.",
+      },
+      {
+        type: "image",
+        src: "/blog/Exordium_Header_1920x622.webp",
+        alt: "Exordium promotional header artwork",
+        caption: "Exordium launches with Cradle of War on June 9.",
+      },
+      {
+        type: "paragraph",
+        text: "For the first time, every new capsuleer will begin their journey inside a dedicated protected region designed to teach the foundations of New Eden in a safer and more structured environment.",
+      },
+      {
+        type: "paragraph",
+        text: "That is a good thing.",
+      },
+      {
+        type: "paragraph",
+        text: "EVE Online has always been a difficult game to enter. The scale, the complexity, the loss systems, the economy, the UI, the social structures - all of it can feel overwhelming to a completely new player. Many pilots quit long before they ever discover what makes EVE truly special.",
+      },
+      {
+        type: "paragraph",
+        text: "Exordium is clearly designed to solve that problem.",
+      },
+      {
+        type: "paragraph",
+        text: "But Exordium is only the beginning.",
+      },
+      {
+        type: "paragraph",
+        text: "Eventually, every new pilot will leave protected space and enter the real sandbox. And when that moment comes, the most important decision they will make is not which ship to fly or which skill to train next.",
+      },
+      {
+        type: "paragraph",
+        text: "It is finding the right corporation.",
+      },
+      {
+        type: "heading",
+        text: "Beyond the Tutorial",
+      },
+      {
+        type: "paragraph",
+        text: "Tutorial systems can teach mechanics.",
+      },
+      {
+        type: "paragraph",
+        text: "Corporations teach players how to live in New Eden.",
+      },
+      {
+        type: "paragraph",
+        text: "They teach:",
+      },
+      {
+        type: "list",
+        items: [
+          "how to work together",
+          "how to build something larger than yourself",
+          "how the economy really functions",
+          "how logistics, industry and cooperation create power",
+          "how to recover after losses",
+          "and how to find purpose inside a universe as large as EVE",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The transition out of Exordium is where many players will either find their long-term direction - or drift away from the game entirely.",
+      },
+      {
+        type: "paragraph",
+        text: "That transition matters.",
+      },
+      {
+        type: "heading",
+        text: "The Kind of Corporation We Want to Build",
+      },
+      {
+        type: "paragraph",
+        text: "RosCro Industries was built around the idea that EVE becomes far more interesting when players build together instead of playing alone.",
+      },
+      {
+        type: "paragraph",
+        text: "We are currently focused on highsec industry, mining, logistics, exploration and PvE, with long-term ambitions that reach far beyond that foundation. Our approach is deliberate and sustainable. We are not trying to rush new players into content they are not ready for, and we are not interested in treating pilots like disposable numbers in a recruitment spreadsheet.",
+      },
+      {
+        type: "paragraph",
+        text: "Real life comes first.",
+      },
+      {
+        type: "paragraph",
+        text: "What we want to create is a stable industrial community where new and experienced players can learn, contribute and grow over time.",
+      },
+      {
+        type: "paragraph",
+        text: "For many players leaving Exordium, the next challenge will not be surviving combat.",
+      },
+      {
+        type: "paragraph",
+        text: "It will be learning:",
+      },
+      {
+        type: "list",
+        items: [
+          "how to earn consistently",
+          "how markets work",
+          "how production chains function",
+          "how to cooperate with other pilots",
+          "how to become part of something larger",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "That is where corporations matter.",
+      },
+      {
+        type: "heading",
+        text: "Industry, Infrastructure and Learning",
+      },
+      {
+        type: "paragraph",
+        text: "One of the biggest misconceptions about EVE Online is that every meaningful path begins with PvP.",
+      },
+      {
+        type: "paragraph",
+        text: "In reality, New Eden runs on industry, logistics, production and coordination.",
+      },
+      {
+        type: "paragraph",
+        text: "Ships do not appear out of nowhere. Wars are not won by individual pilots alone. Entire regions are sustained by industrial infrastructure and organized communities.",
+      },
+      {
+        type: "paragraph",
+        text: "That side of EVE is what interests us most.",
+      },
+      {
+        type: "paragraph",
+        text: "RosCro Industries is building tools, infrastructure and systems designed to help players grow into that part of the game:",
+      },
+      {
+        type: "list",
+        items: [
+          "industrial support",
+          "shared blueprints",
+          "organizational tooling",
+          "community infrastructure",
+          "operational coordination",
+          "long-term progression",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Our goal is not simply to recruit players.",
+      },
+      {
+        type: "paragraph",
+        text: "Our goal is to help create pilots who still enjoy EVE years from now.",
+      },
+      {
+        type: "image",
+        src: "/blog/Exordium2d-map.webp",
+        alt: "Map of the Exordium starter region",
+        caption: "Exordium region layout and starter-system structure.",
+      },
+      {
+        type: "heading",
+        text: "The Future After Exordium",
+      },
+      {
+        type: "paragraph",
+        text: "Community reactions to Exordium have been mixed. Some players believe protected rookie space will improve retention and help more people discover the depth of EVE. Others worry it risks isolating new players from the harsh sandbox identity the game is known for.",
+      },
+      {
+        type: "paragraph",
+        text: "Both perspectives are understandable.",
+      },
+      {
+        type: "paragraph",
+        text: "But regardless of where people stand on the change itself, one thing is certain:",
+      },
+      {
+        type: "paragraph",
+        text: "Thousands of new players will soon leave Exordium looking for direction, stability and community.",
+      },
+      {
+        type: "paragraph",
+        text: "Strong corporations will matter more than ever.",
+      },
+      {
+        type: "paragraph",
+        text: "Exordium may be where new capsuleers begin.",
+      },
+      {
+        type: "paragraph",
+        text: "But the real story of EVE Online has always been written by the corporations, communities and players who choose to build something together.",
+      },
+      {
+        type: "paragraph",
+        text: "If you are beginning your journey beyond Exordium and looking for your first long-term home in New Eden, we would be happy to talk with you.",
+      },
+      {
+        type: "link",
+        text: "Join RosCro Industries on Discord",
+        href: "https://discord.gg/zuZ4TwNekx",
+      },
+      {
+        type: "paragraph",
+        text: "Public in game channel: roscro-pub",
+      },
+    ],
+  },
   {
     slug: "introducing-necm-eve-online-corporation-management",
     title:

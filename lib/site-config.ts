@@ -9,14 +9,26 @@ export const SITE_CONFIG = {
 export const REPORTS = [
   {
     title: "Monthly Industry Report",
+    period: "May 2026",
+    fileName: "eve-industry-report-may-2026.pdf",
+    href: "/reports/eve-industry-report-may-2026.pdf",
+    highlights: {
+      adjustedNav: "34.407B ISK",
+      revenue: "3.999B ISK",
+      realizedProfit: "726.8M ISK",
+      itemsSold: "3,750",
+    },
+  },
+  {
+    title: "Monthly Industry Report",
     period: "April 2026",
     fileName: "eve-industry-report-april-2026.pdf",
     href: "/reports/eve-industry-report-april-2026.pdf",
     highlights: {
-      adjustedNav: "See PDF",
-      revenue: "See PDF",
-      realizedProfit: "See PDF",
-      itemsSold: "See PDF",
+      adjustedNav: "34.376B ISK",
+      revenue: "2.359B ISK",
+      realizedProfit: "476.9M ISK",
+      itemsSold: "1,991",
     },
   },
   {
